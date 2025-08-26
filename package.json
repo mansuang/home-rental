@@ -6,8 +6,9 @@
     "scripts": {
         "start": "npx live-server --port=3000 --open=/index.html",
         "dev": "npx live-server --port=3000 --open=/index.html --watch=assets/",
-        "build": "echo 'No build process needed for static site'",
-        "serve": "npx http-server -p 3000 -o"
+        "build": "mkdir -p public && cp index.html public/ && cp -r assets public/",
+        "serve": "npx http-server -p 3000 -o",
+        "vercel-build": "mkdir -p public && cp -r index.html assets public/"
     },
     "keywords": [
         "home-rental",
