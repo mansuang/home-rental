@@ -9,6 +9,9 @@
 - ✨ **สิ่งอำนวยความสะดวก** - แสดงจุดเด่นของบ้าน (แอร์, เฟอร์นิเจอร์ครบ, บรรยากาศดี)
 - 📞 **ข้อมูลติดต่อ** - เบอร์โทร, LINE ID, และแผนที่ตำแหน่ง
 - 📱 **Responsive Design** - รองรับทุกขนาดหน้าจอ
+- 🔐 **ระบบสมาชิก** - สมัครสมาชิก/เข้าสู่ระบบด้วย Supabase
+- 💬 **ส่งข้อความ** - ลูกค้าสามารถส่งข้อความถึงเจ้าของบ้านได้
+- 📧 **แจ้งเตือนอีเมล** - ส่งอีเมลแจ้งเตือนไปยังเจ้าของบ้านอัตโนมัติ
 
 ## โครงสร้างไฟล์
 
@@ -19,7 +22,9 @@ home-rental/
 │   ├── css/
 │   │   └── style.css      # ไฟล์สไตล์
 │   ├── js/
-│   │   └── script.js      # ไฟล์ JavaScript
+│   │   ├── script.js      # ไฟล์ JavaScript หลัก
+│   │   ├── auth.js        # ระบบ Authentication
+│   │   └── supabase-config.js # การตั้งค่า Supabase
 │   └── images/            # รูปภาพทั้งหมด
 │       ├── Fb01_0.jpg     # ห้องนอน
 │       ├── Fbm01_0.jpg    # ห้องน้ำ
@@ -31,13 +36,42 @@ home-rental/
 │       ├── Fl01_0.jpg     # ห้องนั่งเล่น
 │       ├── Fl02_0.jpg     # ห้องนั่งเล่น 2
 │       └── Fl03_0.jpg     # ภายนอก
-└── README.md              # คู่มือการใช้งาน
+├── supabase/              # Supabase Configuration
+│   ├── functions/
+│   │   └── send-email/    # Edge Function สำหรับส่งอีเมล
+│   ├── migrations/        # Database Migrations
+│   └── config.toml        # Supabase Config
+├── package.json           # Dependencies
+├── README.md              # คู่มือการใช้งาน
+└── SUPABASE_SETUP.md      # คู่มือตั้งค่า Supabase
 ```
 
 ## การใช้งาน
 
-1. เปิดไฟล์ `index.html` ในเว็บเบราว์เซอร์
-2. หรือใช้ Local Server เช่น Live Server ใน VS Code
+### การรันเว็บไซต์
+
+1. **ติดตั้ง dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **เริ่มต้น development server:**
+   ```bash
+   npm start
+   ```
+
+3. **หรือเปิดไฟล์โดยตรง:**
+   - เปิดไฟล์ `index.html` ในเว็บเบราว์เซอร์
+
+### การตั้งค่า Supabase
+
+**สำคัญ!** ก่อนใช้งานระบบสมาชิกและการส่งข้อความ:
+
+1. อ่านคู่มือใน `SUPABASE_SETUP.md`
+2. สร้างโปรเจค Supabase
+3. แก้ไข `assets/js/supabase-config.js`
+4. สร้างตารางฐานข้อมูล
+5. Deploy Edge Function
 
 ## ข้อมูลบ้านเช่า
 
@@ -59,9 +93,11 @@ home-rental/
 - HTML5
 - CSS3 (Flexbox, Grid, Animations)
 - JavaScript (ES6+)
+- Supabase (Authentication & Database)
 - Google Fonts (Sarabun)
 - Font Awesome Icons
 - Google Maps Embed
+- Resend API (Email Service)
 
 ## Features
 
@@ -74,6 +110,10 @@ home-rental/
 - ✅ Loading Animation
 - ✅ Parallax Effects
 - ✅ Interactive Hover Effects
+- ✅ User Authentication (Sign Up/Sign In)
+- ✅ Message System
+- ✅ Email Notifications
+- ✅ Database Integration
 
 ## การปรับแต่ง
 

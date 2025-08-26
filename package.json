@@ -20,8 +20,8 @@
     "author": "Home Rental Owner",
     "license": "MIT",
     "devDependencies": {
-        "live-server": "^1.2.2",
-        "http-server": "^14.1.1"
+        "http-server": "^14.1.1",
+        "live-server": "^1.2.2"
     },
     "repository": {
         "type": "git",
@@ -30,5 +30,8 @@
     "bugs": {
         "url": "https://github.com/yourusername/home-rental-landing-page/issues"
     },
-    "homepage": "https://yourusername.github.io/home-rental-landing-page"
+    "homepage": "https://yourusername.github.io/home-rental-landing-page",
+    "dependencies": {
+        "@supabase/supabase-js": "^2.56.0"
+    }
 }
