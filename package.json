@@ -1,0 +1,34 @@
+{
+    "name": "home-rental-landing-page",
+    "version": "1.0.0",
+    "description": "Landing page สำหรับบ้านเช่าสวยงาม ศรีสะเกษ",
+    "main": "index.html",
+    "scripts": {
+        "start": "npx live-server --port=3000 --open=/index.html",
+        "dev": "npx live-server --port=3000 --open=/index.html --watch=assets/",
+        "build": "echo 'No build process needed for static site'",
+        "serve": "npx http-server -p 3000 -o"
+    },
+    "keywords": [
+        "home-rental",
+        "landing-page",
+        "thai",
+        "sisaket",
+        "responsive",
+        "modern"
+    ],
+    "author": "Home Rental Owner",
+    "license": "MIT",
+    "devDependencies": {
+        "live-server": "^1.2.2",
+        "http-server": "^14.1.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yourusername/home-rental-landing-page.git"
+    },
+    "bugs": {
+        "url": "https://github.com/yourusername/home-rental-landing-page/issues"
+    },
+    "homepage": "https://yourusername.github.io/home-rental-landing-page"
+}
